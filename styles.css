@@ -29,6 +29,24 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    position: relative; /* Add relative positioning to the anchor element */
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient colors */
+    opacity: 0; /* Initially hide the gradient box */
+    z-index: -1; /* Behind the text */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover::before {
+    opacity: 1; /* Show the gradient box on hover */
 }
 
 main {
