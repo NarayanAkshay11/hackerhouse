@@ -199,13 +199,14 @@ nav {
 
 .project-container {
     display: grid;
+    background-color: #000000;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 40px 40px;
     gap: 40px;
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #4f4f4d;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -224,7 +225,7 @@ nav {
 .project-details h3 {
     font-size: 28px;
     margin-bottom: 10px;
-    color:#42bfdd;
+    color:#FFE072;
 }
 
 .project-details p {
