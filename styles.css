@@ -1,73 +1,104 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/* Header and navigation styles */
 header {
-    background-color: #1f1f1f;
+    background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+.logo a {
+    color: #fff;
     text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
     color: #fff;
-    position: relative;
+    text-decoration: none;
 }
 
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.menu-toggle {
+    display: none;
+    cursor: pointer;
 }
 
-nav ul li a:hover::before {
-    opacity: 1;
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
 }
 
-main {
-    padding: 20px 0;
-}
-
+/* Section styles */
 section {
-    margin-bottom: 40px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-section h2 {
-    color: #333;
+.section-title {
+    flex: 1;
+    /* Add your design styles here */
 }
 
-section p {
-    color: #666;
+.section-content {
+    flex: 1;
 }
 
+/* Footer styles */
 footer {
-    background-color: #1f1f1f;
+    background-color: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .section-title,
+    .section-content {
+        flex: 1 0 100%;
+    }
 }
