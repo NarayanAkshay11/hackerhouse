@@ -6,18 +6,19 @@ document.addEventListener("DOMContentLoaded", function() {
   var currentIndex = 0;
   var totalCards = cards.length;
 
+  // Get card wrapper element
+  var cardWrapper = document.querySelector('.card-wrapper');
+
   // Define function to move cards
   function moveCards() {
-    // Hide all cards
-    cards.forEach(function(card) {
-      card.style.display = 'none';
-    });
-
-    // Show current card
-    cards[currentIndex].style.display = 'block';
-
     // Move to next card or loop back to the first card
     currentIndex = (currentIndex + 1) % totalCards;
+
+    // Calculate translation value
+    var translateValue = -currentIndex * cards[0].offsetWidth;
+
+    // Apply CSS transform to move the cards
+    cardWrapper.style.transform = 'translateX(' + translateValue + 'px)';
 
     // Call moveCards function recursively after 3 seconds
     setTimeout(moveCards, 3000); // Adjust timing here (milliseconds)
@@ -26,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Start moving the cards
   moveCards();
 });
-
 
 
 
