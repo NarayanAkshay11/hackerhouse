@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all card elements
+  // Get card elements
   var cards = document.querySelectorAll('.card');
 
   // Set initial index and total number of cards
@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get card wrapper element
   var cardWrapper = document.querySelector('.card-wrapper');
 
+  // Calculate card width including margin
+  var cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight);
+
   // Define function to move cards
   function moveCards() {
-    // Move to next card or loop back to the first card
+    // Move to next card
     currentIndex = (currentIndex + 1) % totalCards;
 
     // Calculate translation value
-    var translateValue = -currentIndex * cards[0].offsetWidth;
+    var translateValue = -currentIndex * cardWidth;
 
     // Apply CSS transform to move the cards
     cardWrapper.style.transform = 'translateX(' + translateValue + 'px)';
@@ -27,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Start moving the cards
   moveCards();
 });
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
