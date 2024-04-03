@@ -21,7 +21,7 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #0E1428;
+    background-color: #42bfdd;
     color: #fff;
     text-decoration: none;
     font-size:18px;
@@ -32,8 +32,8 @@ body {
 }
 
 .btn:hover {
-    color: #ffd275;
-    background-color:#42bfdd;
+    background-color: #ffd275;
+    color:#0E1428;
     
 }
 
