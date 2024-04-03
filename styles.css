@@ -33,7 +33,7 @@ body {
 
 .btn:hover {
     background-color: #ffd275;
-    color: #0B006E;
+    color:#42bfdd;
     
 }
 
@@ -219,13 +219,13 @@ nav {
 .project-details h3 {
     font-size: 28px;
     margin-bottom: 10px;
-    font-color:#ffffff;
+    color:#42bfdd;
 }
 
 .project-details p {
     margin-bottom: 24px;
     font-size:24px;
-    font-color:#ffffff;
+    color:#ffffff;
 }
 .project-details ul{
     margin-left:20px;
@@ -240,6 +240,7 @@ nav {
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
+    color:#42bfdd;
 }
 
 form {
