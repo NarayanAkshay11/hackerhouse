@@ -162,12 +162,12 @@ nav {
 
 .about-content h2 {
     font-size: 36px;
-    font-color:#42bfdd;
+    color:#42bfdd;
     margin-bottom: 20px;
 }
 .about-content p{
     margin-botton:10px;
-    font-color:#ffffff;
+    color:#ffffff;
 }
 .about-image {
     text-align: center;
