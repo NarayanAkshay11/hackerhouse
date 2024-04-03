@@ -235,42 +235,31 @@ nav {
 .project-details ul{
     margin-left:20px;
 }
-#sidebar {
-  background-color: #fff;
-  border-radius: 20px 0 0 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.card-container {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
-  width: 250px;
-  transition: transform 0.3s ease-in-out;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
 }
 
-.sidebar-header {
-  margin-bottom: 20px;
+.card {
+  flex: 0 0 auto;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 20px;
+  width: 200px;
 }
 
-.sidebar-header h3 {
-  margin: 0;
-  color: #ff9800;
-  font-size: 18px;
+.card-title {
+  margin-top: 0;
 }
 
-#sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#sidebar ul li a {
-  display: block;
-  color: #333;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-}
-
-#sidebar ul li a:hover {
-  background-color: #e79ca5;
+.card-subtitle {
+  margin-bottom: 0;
 }
 /* Contact section styles */
 .contact {
