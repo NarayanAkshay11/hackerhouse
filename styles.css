@@ -236,12 +236,14 @@ nav {
     margin-left:20px;
 }
 .card-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-wrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card {
@@ -251,7 +253,7 @@ nav {
   border-radius: 5px;
   padding: 20px;
   margin-right: 20px;
-  width: 200px;
+  width: calc(20% - 20px); /* 20% width for each card with margin */
 }
 
 .card-title {
@@ -261,6 +263,8 @@ nav {
 .card-subtitle {
   margin-bottom: 0;
 }
+
+
 /* Contact section styles */
 .contact {
     padding: 80px 0;
